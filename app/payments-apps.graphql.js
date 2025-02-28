@@ -48,6 +48,9 @@ export default class PaymentsAppsClient {
 
     if (this.type === PAYMENT && kind === 'authorization') payload['authorizationExpiresAt'] = this.tomorrow.toISOString();
 
+    // Pass the networkTransactionId in the payload if it is available from network response
+    if (session.networkTransactionId) payload['networkTransactionId'] = session.networkTransactionId;
+
     const response = await this.#perform(schema[this.resolveMutation], payload);
     const responseData = response[this.resolveMutation]
     if (responseData?.userErrors?.length === 0) await this.update?.(id, RESOLVE);
@@ -168,7 +171,7 @@ export default class PaymentsAppsClient {
    * @returns
    */
   dependencyInjector(type) {
-    switch(type) {
+    switch (type) {
       case PAYMENT:
         this.resolveMutation = "paymentSessionResolve"
         this.rejectMutation = "paymentSessionReject"
