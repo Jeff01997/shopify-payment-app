@@ -1,6 +1,6 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-name = "<App Name>"
+name = "AppName"
 client_id = "<API Client ID>"
 application_url = "https://example.com"
 embedded = false
@@ -14,3 +14,6 @@ api_version = "2023-07"
 
 [pos]
 embedded = false
+
+[auth]
+redirect_urls = []
