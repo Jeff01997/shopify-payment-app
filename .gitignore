@@ -11,7 +11,8 @@ node_modules
 database.sqlite
 
 .env
-package-lock.json
+# check in packge-lock to make sure package sync in all test host
+# package-lock.json
 yarn.lock
 
 # Ignore Shopify CLI state/config
