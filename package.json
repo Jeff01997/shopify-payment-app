@@ -31,7 +31,7 @@
     "@shopify/shopify-api": "^9.0.1",
     "@shopify/shopify-app-remix": "^2.3.0",
     "@shopify/shopify-app-session-storage-prisma": "^2.0.3",
-    "@shopify/polaris-icons": "^8.0.0",
+    "@shopify/polaris-icons": "^9.3.1",
     "isbot": "^4.1.0",
     "eckey-utils": "^0.7.13",
     "prisma": "^4.13.0",
