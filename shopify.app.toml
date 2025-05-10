@@ -1,8 +1,8 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 name = "AppName"
-client_id = "<API Client ID>"
-application_url = "https://example.com"
+client_id = "f9c6bb86cb3d888ef6e51e217b39a15f"
+application_url = "https://christopher-anti-continuity-precious.trycloudflare.com"
 embedded = false
 
 [access_scopes]
@@ -16,4 +16,11 @@ api_version = "2023-07"
 embedded = false
 
 [auth]
-redirect_urls = []
+redirect_urls = [
+  "https://christopher-anti-continuity-precious.trycloudflare.com/auth/callback",
+  "https://christopher-anti-continuity-precious.trycloudflare.com/auth/shopify/callback",
+  "https://christopher-anti-continuity-precious.trycloudflare.com/api/auth/callback"
+]
+
+[build]
+automatically_update_urls_on_dev = true
